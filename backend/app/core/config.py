@@ -37,14 +37,14 @@ class Settings(BaseSettings):
     FREE_SHIPPING_THRESHOLD: float = 3500.0
 
     # CORS
-    FRONTEND_URL: str = "http://localhost:3000"
-    ALLOWED_ORIGINS: Union[str, List[str]] = "http://localhost:3000,http://127.0.0.1:3000"
+    FRONTEND_URL: str = "https://hamza-gadget-store.vercel.app"
+    ALLOWED_ORIGINS: Union[str, List[str]] = "https://hamza-gadget-store.vercel.app,http://localhost:3000,http://127.0.0.1:3000"
 
     @property
     def cors_origins(self) -> List[str]:
         if isinstance(self.ALLOWED_ORIGINS, str):
-            return [origin.strip() for origin in self.ALLOWED_ORIGINS.split(",") if origin.strip()]
-        return self.ALLOWED_ORIGINS
+            return [origin.strip() for origin in self.ALLOWED_ORIGINS.split(",") if origin.strip() and origin.strip() != "*"]
+        return [o for o in self.ALLOWED_ORIGINS if o != "*"]
 
     model_config = SettingsConfigDict(
         env_file=".env",
