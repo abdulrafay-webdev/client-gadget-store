@@ -1,5 +1,5 @@
 from contextlib import asynccontextmanager
-from fastapi import FastAPI
+from fastapi import FastAPI, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
 from app.core.database import init_db
@@ -25,6 +25,19 @@ app = FastAPI(
     lifespan=lifespan
 )
 
+# Vercel Path Normalization Middleware
+@app.middleware("http")
+async def vercel_path_middleware(request: Request, call_next):
+    path = request.scope.get("path", "")
+    for prefix in ["/api/index.py", "/api/index"]:
+        if path.startswith(prefix):
+            new_path = path[len(prefix):]
+            if not new_path or not new_path.startswith("/"):
+                new_path = "/" + new_path.lstrip("/")
+            request.scope["path"] = new_path
+            break
+    return await call_next(request)
+
 # CORS setup
 app.add_middleware(
     CORSMiddleware,
@@ -36,6 +49,10 @@ app.add_middleware(
 
 # Mount API v1 router
 app.include_router(api_router, prefix=settings.API_V1_STR)
+
+@app.get("/favicon.ico", include_in_schema=False)
+def favicon():
+    return Response(status_code=204)
 
 @app.get("/", tags=["Health"])
 def health_check():
