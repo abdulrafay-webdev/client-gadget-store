@@ -4,7 +4,7 @@ import React from "react";
 import { MessageCircle } from "lucide-react";
 
 export function WhatsAppButton() {
-  const whatsappNumber = process.env.NEXT_PUBLIC_STORE_WHATSAPP || "03152720915";
+  const whatsappNumber = process.env.NEXT_PUBLIC_STORE_WHATSAPP || "0312-1080916";
   const cleanNumber = whatsappNumber.replace(/\D/g, "");
   const formattedNumber = cleanNumber.startsWith("0") ? `92${cleanNumber.slice(1)}` : cleanNumber;
   const message = encodeURIComponent("Hello Hamza Gadgets! I would like to inquire about your products.");

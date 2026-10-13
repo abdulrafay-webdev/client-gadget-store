@@ -19,3 +19,8 @@ class StoreSettingsResponse(BaseModel):
     store_address: str
     shipping_fee: float
     free_shipping_threshold: float
+    facebook_url: Optional[str] = None
+    tiktok_url: Optional[str] = None
+    instagram_url: Optional[str] = None
+    youtube_url: Optional[str] = None
+    whatsapp_channel_url: Optional[str] = None

@@ -117,6 +117,11 @@ export interface StoreSettings {
   store_address: string;
   shipping_fee: number;
   free_shipping_threshold: number;
+  facebook_url?: string;
+  tiktok_url?: string;
+  instagram_url?: string;
+  youtube_url?: string;
+  whatsapp_channel_url?: string;
 }
 
 export interface AdminUser {

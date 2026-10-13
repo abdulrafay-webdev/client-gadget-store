@@ -29,12 +29,17 @@ class Settings(BaseSettings):
 
     # Store Settings Defaults
     STORE_NAME: str = "Hamza Gadget Store"
-    STORE_PHONE: str = "03152720915"
-    STORE_WHATSAPP: str = "03152720915"
-    STORE_EMAIL: str = "hamzagadgethouse@gmail.com"
+    STORE_PHONE: str = "0312-1080916"
+    STORE_WHATSAPP: str = "0312-1080916"
+    STORE_EMAIL: str = "hamzagadgetstore@gmail.com"
     STORE_ADDRESS: str = "Shop #4, Gadget Plaza, Hall Road, Lahore, Pakistan"
     SHIPPING_FEE: float = 250.0
     FREE_SHIPPING_THRESHOLD: float = 3500.0
+    FACEBOOK_URL: str = "https://www.facebook.com/share/1Egkytf2Gd/"
+    TIKTOK_URL: str = "https://www.tiktok.com/@hamzagadget.store?_r=1&_t=ZS-9AUywpQ8HEC"
+    INSTAGRAM_URL: str = "https://www.instagram.com/hamzagadgetstore?dlrf=MXYwdTJsazJ1OTg3YQ=="
+    YOUTUBE_URL: str = "https://youtube.com/@hamzagadgetstore-78?si=Nfl_Vl4erm3TsHGh"
+    WHATSAPP_CHANNEL_URL: str = "https://whatsapp.com/channel/0029Vb9HelgCnA7miThMdt16"
 
     # CORS
     FRONTEND_URL: str = "https://hamza-gadget-store.vercel.app"

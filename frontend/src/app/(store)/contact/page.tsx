@@ -45,8 +45,8 @@ export default function ContactPage() {
                 <Phone className="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-white block">Phone Support</strong>
-                  <a href="tel:+923152720915" className="hover:text-white transition">
-                    0315-2720915
+                  <a href="tel:+923121080916" className="hover:text-white transition">
+                    0312-1080916
                   </a>
                 </div>
               </div>
@@ -55,8 +55,8 @@ export default function ContactPage() {
                 <Mail className="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-white block">Email Inquiries</strong>
-                  <a href="mailto:hamzagadgethouse@gmail.com" className="hover:text-white transition">
-                    hamzagadgethouse@gmail.com
+                  <a href="mailto:hamzagadgetstore@gmail.com" className="hover:text-white transition">
+                    hamzagadgetstore@gmail.com
                   </a>
                 </div>
               </div>
@@ -70,9 +70,9 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="pt-3">
+            <div className="pt-3 space-y-2.5">
               <a
-                href="https://wa.me/923152720915"
+                href="https://wa.me/923121080916"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold w-full py-3 text-xs flex items-center justify-center gap-2"
@@ -80,6 +80,55 @@ export default function ContactPage() {
                 <MessageSquare className="w-4 h-4" />
                 <span>Chat Instantly on WhatsApp</span>
               </a>
+              <a
+                href="https://whatsapp.com/channel/0029Vb9HelgCnA7miThMdt16"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-gold-outline w-full py-2.5 text-xs flex items-center justify-center gap-2"
+              >
+                <span>Join Official WhatsApp Channel</span>
+              </a>
+            </div>
+
+            {/* Social Media Links */}
+            <div className="pt-4 border-t border-[#222222]">
+              <span className="text-xs font-bold text-[#D4AF37] block mb-2 uppercase tracking-wider">
+                Official Social Profiles
+              </span>
+              <div className="grid grid-cols-2 gap-2 text-xs">
+                <a
+                  href="https://www.facebook.com/share/1Egkytf2Gd/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg bg-[#141414] hover:bg-[#1A1A1A] border border-[#222222] hover:border-[#D4AF37] text-white hover:text-[#D4AF37] transition flex items-center gap-1.5"
+                >
+                  <span>Facebook Page</span>
+                </a>
+                <a
+                  href="https://www.instagram.com/hamzagadgetstore?dlrf=MXYwdTJsazJ1OTg3YQ=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg bg-[#141414] hover:bg-[#1A1A1A] border border-[#222222] hover:border-[#D4AF37] text-white hover:text-[#D4AF37] transition flex items-center gap-1.5"
+                >
+                  <span>Instagram</span>
+                </a>
+                <a
+                  href="https://www.tiktok.com/@hamzagadget.store?_r=1&_t=ZS-9AUywpQ8HEC"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg bg-[#141414] hover:bg-[#1A1A1A] border border-[#222222] hover:border-[#D4AF37] text-white hover:text-[#D4AF37] transition flex items-center gap-1.5"
+                >
+                  <span>TikTok</span>
+                </a>
+                <a
+                  href="https://youtube.com/@hamzagadgetstore-78?si=Nfl_Vl4erm3TsHGh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg bg-[#141414] hover:bg-[#1A1A1A] border border-[#222222] hover:border-[#D4AF37] text-white hover:text-[#D4AF37] transition flex items-center gap-1.5"
+                >
+                  <span>YouTube</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>

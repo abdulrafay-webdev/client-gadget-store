@@ -19,6 +19,11 @@ DEFAULT_SETTINGS = {
     "store_address": app_settings.STORE_ADDRESS,
     "shipping_fee": str(app_settings.SHIPPING_FEE),
     "free_shipping_threshold": str(app_settings.FREE_SHIPPING_THRESHOLD),
+    "facebook_url": app_settings.FACEBOOK_URL,
+    "tiktok_url": app_settings.TIKTOK_URL,
+    "instagram_url": app_settings.INSTAGRAM_URL,
+    "youtube_url": app_settings.YOUTUBE_URL,
+    "whatsapp_channel_url": app_settings.WHATSAPP_CHANNEL_URL,
 }
 
 @router.get("", response_model=StoreSettingsResponse)
@@ -36,7 +41,12 @@ def get_public_settings(session: Session = Depends(get_session)):
         store_email=get_val("store_email", app_settings.STORE_EMAIL),
         store_address=get_val("store_address", app_settings.STORE_ADDRESS),
         shipping_fee=float(get_val("shipping_fee", app_settings.SHIPPING_FEE)),
-        free_shipping_threshold=float(get_val("free_shipping_threshold", app_settings.FREE_SHIPPING_THRESHOLD))
+        free_shipping_threshold=float(get_val("free_shipping_threshold", app_settings.FREE_SHIPPING_THRESHOLD)),
+        facebook_url=get_val("facebook_url", app_settings.FACEBOOK_URL),
+        tiktok_url=get_val("tiktok_url", app_settings.TIKTOK_URL),
+        instagram_url=get_val("instagram_url", app_settings.INSTAGRAM_URL),
+        youtube_url=get_val("youtube_url", app_settings.YOUTUBE_URL),
+        whatsapp_channel_url=get_val("whatsapp_channel_url", app_settings.WHATSAPP_CHANNEL_URL),
     )
 
 @router.get("/admin", response_model=List[SettingItem])
