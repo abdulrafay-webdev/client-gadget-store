@@ -107,12 +107,12 @@ export function CartDrawer() {
                     className="p-3.5 rounded-xl bg-[#141414] border border-[#222222] hover:border-[#333333] transition flex gap-3.5"
                   >
                     {/* Thumbnail Container */}
-                    <div className="relative w-20 h-20 rounded-lg bg-[#1A1A1A] border border-[#2A2A2A] overflow-hidden shrink-0 flex items-center justify-center p-1">
+                    <div className="relative w-20 h-20 rounded-lg bg-[#1A1A1A] border border-[#2A2A2A] overflow-hidden shrink-0">
                       <Image
                         src={thumb}
                         alt={item.product.name}
                         fill
-                        className="object-contain p-1"
+                        className="object-cover object-center"
                         sizes="80px"
                       />
                     </div>

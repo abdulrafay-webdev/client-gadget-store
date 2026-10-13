@@ -239,12 +239,12 @@ function TrackOrderContent() {
                   className="p-3.5 rounded-xl bg-[#161616] border border-[#222222] flex items-center justify-between gap-4"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="relative w-12 h-12 rounded-lg bg-[#1F1F1F] border border-[#2A2A2A] overflow-hidden shrink-0 flex items-center justify-center p-1">
+                    <div className="relative w-12 h-12 rounded-lg bg-[#1F1F1F] border border-[#2A2A2A] overflow-hidden shrink-0">
                       <Image
                         src={item.product_image_url || "/placeholder-gadget.png"}
                         alt={item.product_name}
                         fill
-                        className="object-contain p-1"
+                        className="object-cover object-center"
                         sizes="48px"
                       />
                     </div>

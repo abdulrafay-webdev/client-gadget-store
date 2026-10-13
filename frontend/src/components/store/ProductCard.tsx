@@ -31,14 +31,14 @@ export function ProductCard({ product }: ProductCardProps) {
   return (
     <div className="group relative bg-[#111111] hover:bg-[#141414] border border-[#2A2A2A] hover:border-[#D4AF37]/60 rounded-xl sm:rounded-2xl overflow-hidden transition-all duration-300 flex flex-col justify-between hover:shadow-[0_0_20px_rgba(212,175,55,0.15)]">
       <div>
-        {/* Image Container with contrasting dark background */}
-        <Link href={`/product/${product.slug}`} className="block relative aspect-square w-full bg-[#181818] overflow-hidden p-2 sm:p-4">
+        {/* Image Container with auto-cropped 1:1 square display */}
+        <Link href={`/product/${product.slug}`} className="block relative aspect-square w-full bg-[#181818] overflow-hidden">
           <Image
             src={thumbnail}
             alt={product.name}
             fill
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-            className="object-contain p-1.5 sm:p-2 group-hover:scale-105 transition-transform duration-300"
+            className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
           />
 
           {/* Badges Overlay */}
@@ -57,12 +57,12 @@ export function ProductCard({ product }: ProductCardProps) {
 
           {/* Low Stock Badge */}
           {product.stock <= 5 && product.stock > 0 && (
-            <div className="absolute bottom-2 left-2 sm:bottom-3 sm:left-3 bg-red-950/80 border border-red-800/60 text-red-300 text-[9px] sm:text-[10px] font-semibold px-1.5 sm:px-2 py-0.5 rounded backdrop-blur-sm">
+            <div className="absolute bottom-2 left-2 sm:bottom-3 sm:left-3 bg-red-950/80 border border-red-800/60 text-red-300 text-[9px] sm:text-[10px] font-semibold px-1.5 sm:px-2 py-0.5 rounded backdrop-blur-sm z-10">
               Only {product.stock} left!
             </div>
           )}
           {product.stock === 0 && (
-            <div className="absolute inset-0 bg-black/70 backdrop-blur-xs flex items-center justify-center">
+            <div className="absolute inset-0 bg-black/70 backdrop-blur-xs flex items-center justify-center z-10">
               <span className="bg-red-900/90 text-white text-[10px] sm:text-xs font-bold px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full uppercase tracking-wider">
                 Sold Out
               </span>

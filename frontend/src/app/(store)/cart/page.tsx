@@ -94,12 +94,12 @@ export default function CartPage() {
                 className="p-4 sm:p-5 rounded-2xl bg-[#111111] border border-[#222222] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
               >
                 <div className="flex items-center gap-4">
-                  <div className="relative w-20 h-20 rounded-xl bg-[#181818] border border-[#2A2A2A] overflow-hidden shrink-0 flex items-center justify-center p-2">
+                  <div className="relative w-20 h-20 rounded-xl bg-[#181818] border border-[#2A2A2A] overflow-hidden shrink-0">
                     <Image
                       src={thumb}
                       alt={item.product.name}
                       fill
-                      className="object-contain p-1"
+                      className="object-cover object-center"
                       sizes="80px"
                     />
                   </div>

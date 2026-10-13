@@ -312,12 +312,12 @@ export default function CheckoutPage() {
 
                 return (
                   <div key={item.product.id} className="flex items-center gap-3 py-1">
-                    <div className="relative w-14 h-14 rounded-lg bg-[#181818] border border-[#2A2A2A] overflow-hidden shrink-0 flex items-center justify-center p-1">
+                    <div className="relative w-14 h-14 rounded-lg bg-[#181818] border border-[#2A2A2A] overflow-hidden shrink-0">
                       <Image
                         src={thumb}
                         alt={item.product.name}
                         fill
-                        className="object-contain p-1"
+                        className="object-cover object-center"
                         sizes="56px"
                       />
                     </div>
