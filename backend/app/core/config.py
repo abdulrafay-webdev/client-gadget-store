@@ -42,8 +42,8 @@ class Settings(BaseSettings):
     WHATSAPP_CHANNEL_URL: str = "https://whatsapp.com/channel/0029Vb9HelgCnA7miThMdt16"
 
     # CORS
-    FRONTEND_URL: str = "https://hamza-gadget-store.vercel.app"
-    ALLOWED_ORIGINS: Union[str, List[str]] = "https://hamza-gadget-store.vercel.app,http://localhost:3000,http://127.0.0.1:3000"
+    FRONTEND_URL: str = "https://www.hamzagadget.store"
+    ALLOWED_ORIGINS: Union[str, List[str]] = "https://www.hamzagadget.store,https://hamzagadget.store,https://hamza-gadget-store.vercel.app,http://localhost:3000,http://127.0.0.1:3000"
 
     @property
     def cors_origins(self) -> List[str]:
