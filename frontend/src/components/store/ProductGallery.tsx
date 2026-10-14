@@ -19,15 +19,15 @@ export function ProductGallery({ images, productName }: ProductGalleryProps) {
 
   return (
     <div className="flex flex-col gap-4">
-      {/* Main Image Stage */}
-      <div className="relative aspect-square w-full rounded-2xl bg-[#141414] border border-[#2A2A2A] overflow-hidden flex items-center justify-center p-6">
+      {/* Main Image Stage - 1:1 Auto-Crop Full Box */}
+      <div className="relative aspect-square w-full rounded-2xl bg-[#141414] border border-[#2A2A2A] overflow-hidden group shadow-lg">
         <Image
           src={activeImage.image_url}
           alt={`${productName} view ${activeIndex + 1}`}
           fill
           priority
           sizes="(max-width: 768px) 100vw, 50vw"
-          className="object-contain p-4 hover:scale-105 transition-transform duration-300"
+          className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
         />
       </div>
 
@@ -38,10 +38,10 @@ export function ProductGallery({ images, productName }: ProductGalleryProps) {
             <button
               key={img.id || idx}
               onClick={() => setActiveIndex(idx)}
-              className={`relative w-20 h-20 rounded-xl bg-[#161616] border overflow-hidden shrink-0 transition-all p-1 ${
+              className={`relative w-20 h-20 rounded-xl bg-[#161616] border overflow-hidden shrink-0 transition-all ${
                 activeIndex === idx
-                  ? "border-[#D4AF37] ring-2 ring-[#D4AF37]/30 shadow-[0_0_10px_rgba(212,175,55,0.2)]"
-                  : "border-[#2A2A2A] hover:border-[#444444]"
+                  ? "border-[#D4AF37] ring-2 ring-[#D4AF37]/40 shadow-[0_0_12px_rgba(212,175,55,0.3)]"
+                  : "border-[#2A2A2A] hover:border-[#555555]"
               }`}
             >
               <Image
@@ -49,7 +49,7 @@ export function ProductGallery({ images, productName }: ProductGalleryProps) {
                 alt={`${productName} thumbnail ${idx + 1}`}
                 fill
                 sizes="80px"
-                className="object-contain p-1"
+                className="object-cover object-center"
               />
             </button>
           ))}
