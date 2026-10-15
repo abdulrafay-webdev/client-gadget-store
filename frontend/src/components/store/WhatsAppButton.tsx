@@ -3,9 +3,7 @@
 import React from "react";
 
 export function WhatsAppButton() {
-  const whatsappNumber = process.env.NEXT_PUBLIC_STORE_WHATSAPP || "0312-1080916";
-  const cleanNumber = whatsappNumber.replace(/\D/g, "");
-  const formattedNumber = cleanNumber.startsWith("0") ? `92${cleanNumber.slice(1)}` : cleanNumber;
+  const formattedNumber = "923121080916";
   const message = encodeURIComponent("Hello Hamza Gadgets! I would like to inquire about your products.");
 
   return (

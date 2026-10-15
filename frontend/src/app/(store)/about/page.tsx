@@ -30,21 +30,15 @@ export default function AboutPage() {
       </div>
 
       {/* Hero Visual Card */}
-      <div className="relative aspect-21/9 rounded-3xl overflow-hidden border border-[#2A2A2A] bg-[#141414]">
+      <div className="relative aspect-16/9 w-full rounded-2xl sm:rounded-3xl overflow-hidden border border-[#2A2A2A] bg-[#141414] shadow-2xl">
         <Image
-          src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=1600&q=85"
-          alt="Hamza Gadget Store Lab"
+          src="/about.jpeg"
+          alt="About Hamza Gadget Store"
           fill
-          className="object-cover"
+          priority
+          sizes="(max-width: 1024px) 100vw, 1200px"
+          className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex items-end p-8 sm:p-12">
-          <div className="space-y-2">
-            <h3 className="text-2xl font-bold text-white">Engineering Quality & Authenticity</h3>
-            <p className="text-sm text-[#A1A1A1] max-w-xl">
-              Every gadget in our warehouse undergoes multi-stage functionality testing so you receive guaranteed performance right out of the box.
-            </p>
-          </div>
-        </div>
       </div>
 
       {/* Mission Pillars */}
